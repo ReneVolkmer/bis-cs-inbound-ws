@@ -22,6 +22,8 @@ namespace BisConnectivityServices
 
             AuthenticationContext authenticationContext = new AuthenticationContext(aadTenant);
             AuthenticationResult authenticationResult;
+            
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
 
             if (useWebAppAuthentication)
             {
